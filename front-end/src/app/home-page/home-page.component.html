@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+<div class="header">
+    <div class="left">
+        <h2>Logo</h2>
+        <div class="search-bar">
+            <label class="material-symbols-outlined">
+                search
+            </label>
+            <input (keydown.enter)="getImages(search.value)" type="text" placeholder="Search" #search>
+        </div>
+    </div>
+    <div>
+        <button (click)="openDialog()">Add a photo</button>
+    </div>
+</div>
+<div class="gallery">
+    <ng-container *ngIf="data">
+        <ng-container *ngFor="let image of data;">
+            <div class="image">
+                <img src={{image.url}}>
+                <div class="label">
+                    <button (click)="deleteImage(image)">delete</button>
+                    <span>{{image.label}}</span>
+                </div>
+            </div>
+        </ng-container>
+    </ng-container>
+    <ng-container *ngIf="!data">
+        <h2>No results found!</h2>
+    </ng-container>
+</div>

@@ -1,0 +1,53 @@
+
+
+.input {
+    display: flex;
+    flex-direction: column;
+
+    label {
+        margin: .5rem 0;
+        font-weight: 500;
+    }
+    input {
+        width: 25rem;
+        height: 2.5rem;
+        border-radius: 8px;
+        padding: 0 1rem;
+        border: rgb(136, 136, 136) solid 1px;
+    }
+}
+.error {
+    color: red;
+}
+.buttons {
+    display: flex;
+    justify-content: end;
+    padding-top: 1rem;
+    button {
+        border: none;
+        width: 6rem;
+        padding: .8rem .5rem;
+        margin-left: 10px;
+        border-radius: 7px;
+        cursor: pointer;
+        color: #fff;
+    }
+    .cancel {
+        background-color: rgb(243, 63, 63);
+    }
+    .cancel:hover {
+        background-color: rgb(243, 99, 99);
+    }
+    .cancel:active {
+        background-color: rgb(201, 33, 33);
+    }
+    .submit {
+        background-color: #22b15b;
+    }
+    .submit:hover {
+        background-color: #5ce291;
+    }
+    .submit:active {
+        background-color: #15a850;
+    }
+}
