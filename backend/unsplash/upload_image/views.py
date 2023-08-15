@@ -1,7 +1,7 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 
-from upload_image.models import Images
+from .models import Images
 # Create your views here.
 
 class UploadImageView(APIView):
